@@ -1,0 +1,84 @@
+name: "💡 Idea Submission"
+description: "Submit a project idea for the BNB AI Coding Sprint"
+title: "[IDEA] "
+labels: ["idea", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Submit Your Idea
+        Thanks for contributing to the BNB AI Coding Sprint! Fill out the form below to propose your idea.
+        
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which track does your idea belong to?
+      options:
+        - Agent
+        - DeFi
+        - Consumer Apps
+        - Builder Tools
+        - Infrastructure
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this idea solve?
+      placeholder: "Describe the problem clearly..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: High-level description of how to solve it
+      placeholder: "Describe your proposed solution..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-bnb
+    attributes:
+      label: Why BNB Chain?
+      description: Why should this be built on BNB Chain specifically?
+      placeholder: "Explain the BNB Chain relevance..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria
+      description: How do we know if it's built successfully?
+      placeholder: |
+        - [ ] Working demo
+        - [ ] GitHub repo with documentation
+        - [ ] On-chain verifiable results
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources & References
+      description: Any helpful links, documentation, or inspiration
+      placeholder: "Add links, docs, or references..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: This idea is relevant to BNB Chain ecosystem
+          required: true
+        - label: This idea can result in open-source deliverables
+          required: true
